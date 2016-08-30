@@ -7,8 +7,8 @@ public class SeverityFilter implements IFilter {
 
   EventSeverity minSeverity;
 
-  public boolean filter(Event e) {
-    return (e.getSeverity().compareTo(minSeverity) == 1);
+  public boolean filter(Event event) {
+    return (event.getSeverity().compareTo(minSeverity) == 1);
   }
 
   public SeverityFilter(EventSeverity minSeverity) {
@@ -16,4 +16,11 @@ public class SeverityFilter implements IFilter {
     this.minSeverity = minSeverity;
   }
 
+  public EventSeverity getMinSeverity() {
+    return minSeverity;
+  }
+
+  public void setMinSeverity(EventSeverity minSeverity) {
+    this.minSeverity = minSeverity;
+  }
 }
